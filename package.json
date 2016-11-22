@@ -1,0 +1,21 @@
+{
+  "name": "allex_timerlib",
+  "version": "1.0.0",
+  "description": "AllexJS lib for a Periodic Timer with a reset capability",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.hers.rs:allex_libs/timer.git"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "timer",
+    "periodic",
+    "lib"
+  ],
+  "author": "HERS Belgrade",
+  "license": "ISC"
+}
