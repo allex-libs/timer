@@ -7,9 +7,14 @@ function createTimer (execlib) {
   function TheTimer (func, period, initialtrigger) {
     this.func = func;
     this.period = period;
+    this.periodic = true;
     this.target = 0;
     this.goer = this.go.bind(this);
     this.timeout = null;
+    if (period < 0) {
+      this.period = -period;
+      this.periodic = false;
+    }
     if (initialtrigger) {
       this.func();
     }
@@ -22,6 +27,7 @@ function createTimer (execlib) {
     this.timeout = null;
     this.goer = null;
     this.target = null;
+    this.periodic = null;
     this.period = null;
     this.func = null;
   };
@@ -50,7 +56,11 @@ function createTimer (execlib) {
       return;
     }
     this.func();
-    this.set();
+    if (this.periodic) {
+      this.set();
+    } else {
+      this.destroy();
+    }
   };
   TheTimer.prototype.reset = function () {
     if (this.timeout) {
