@@ -1,6 +1,6 @@
 {
   "name": "allex_timerlib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllexJS lib for a Periodic Timer with a reset capability",
   "main": "index.js",
   "scripts": {
