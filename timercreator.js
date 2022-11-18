@@ -40,9 +40,9 @@ function createTimer (execlib) {
     if (this.target) {
       this.target += this.period;
     } else {
-      this.target = Date.now()+this.period;
+      this.target = lib.now()+this.period;
     }
-    nextperiod = this.target-Date.now();
+    nextperiod = this.target-lib.now();
     if (nextperiod<1) {
       this.timeout = lib.runNext(this.goer);
     } else {
